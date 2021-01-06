@@ -133,7 +133,7 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("/images/light_bg.jpg");
+  background-image: url("https://cdn.jsdelivr.net/gh/nickadans/nickadans.github.io/images/light_bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1958,7 +1958,7 @@ pre[class*='language-']:hover .copy-btn {
     color: var(--hty-text-color);
   }
   :root:not([data-user-color-scheme]) body::before {
-    background-image: url("/images/night_bg.jpg");
+    background-image: url("https://cdn.jsdelivr.net/gh/nickadans/nickadans.github.io/images/night_bg.jpg");
   }
   :root:not([data-user-color-scheme]) .char {
     background-color: rgba(0,0,0,0.5);
@@ -2034,7 +2034,7 @@ pre[class*='language-']:hover .copy-btn {
   color: var(--hty-text-color);
 }
 [data-user-color-scheme='dark'] body::before {
-  background-image: url("/images/night_bg.jpg");
+  background-image: url("https://cdn.jsdelivr.net/gh/nickadans/nickadans.github.io/images/night_bg.jpg");
 }
 [data-user-color-scheme='dark'] .char {
   background-color: rgba(0,0,0,0.5);
