@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="NickAdans">
+
+
+
+
+
+<title>使用Github Page + Hexo搭建静态个人博客 | Nick&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">NICKADANS</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">NICKADANS</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">使用Github Page + Hexo搭建静态个人博客</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">NickAdans</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">一月 9, 2021&nbsp;&nbsp;10:12:40</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>开发个人的静态博客页面并不需要特别多的计算机相关的知识，作为一个前端几乎零开发经验的小白，我摸索了大概四天时间也完成了个人博客页面的搭建，这里记录一下这个过程，供自己和需要的朋友参考。</p>
+<p>本博客基于<font color = red>Hexo</font>这一静态站点生成框架搭建，文章的内容以Markdown语法书写，使用Hexo可以方便地生成静态页面并部署到网站上，从而不需要关心网页源代码的具体细节，只需专注于内容创作即可。同时，该博客作为<font color = red>Github Page</font>挂载在github上，这是由于github提供的存储空间足以支持个人博客的运行，既省去了购买及搭建云服务器的开销，也简化了建设博客的流程。</p>
+<p>就让我们开始吧！</p>
+<h2 id="本地环境搭建"><a href="#本地环境搭建" class="headerlink" title="本地环境搭建"></a>本地环境搭建</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><blockquote>
+<p><font color = red>Node.js</font>是一个用于创建服务端应用程序的运行系统，它可以轻松构建网络或其他事件驱动的应用程序服务器。</p>
+</blockquote>
+<p>由于Hexo是基于Node.js实现的，因此在安装Hexo前，请确保你的电脑已拥有Node.js环境。</p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">点击此处</a>进入Node.js官网下载对应的LTS(Long Term Support)版本，安装时只需按照默认选项，一概next即可。</p>
+<p>安装完毕，可以通过Windows+R的快捷键打开”运行”界面，输入cmd，打开Windows的命令行，在其中输入node -v和npm -v，如果出现版本号，那么就安装成功啦！</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQmiJU.png" alt="nodejs安装完成!"><em>node.js安装完成！</em></p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><blockquote>
+<p><font color = red>Git</font>是一个开源的分布式版本控制系统，可以有效、高速地处理很小到非常大的<strong>项目版本管理</strong>，帮助我们把本地的网页上传到github</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/download">点击此处</a>进入Git官网下载相应版本，默认安装即可。</p>
+<p>安装完毕，你依然可以在命令行中输入git –version来验证是否安装成功。</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQnP0I.png" alt="git安装完成!"><em>git安装完成!</em></p>
+<p><font color = red>注意！</font>在安装完git后，我们之后的所有操作都通过git bash这一命令行工具实现，这意味着，你将不需要再使用Windows+R打开”运行”界面，在其中输入cmd，调出Windows的命令提示符，也就是上述图片中的这一程序，而转而直接使用git bash来执行命令。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><blockquote>
+<p><font color = red>Hexo</font>是一款基于Node.js的静态博客框架，依赖少，易于使用，可以方便地生成静态页面。</p>
+</blockquote>
+<p>拥有Git环境后，我们在电脑上选择一个位置新建一个文件夹用来存放博客文件。比如我放在<font color = #0x0033f3>D:\Blog</font>这个文件夹下，在该文件夹下右键鼠标，点击Git Bash Here打开git bash命令行界面，输入以下npm指令即可安装hexo环境。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g</code></pre>
+
+<p>安装完成后，同样可以在git bash中输入以下指令，验证安装是否完成。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo -v</code></pre>
+
+<h3 id="配置本地Hexo"><a href="#配置本地Hexo" class="headerlink" title="配置本地Hexo"></a>配置本地Hexo</h3><p>在完成以上步骤后，接下来，在你的文件夹中右击鼠标，点击Git Bash Here打开git bash命令行界面，输入以下指令来初始化Hexo的默认博客模板。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo init
+$ <span class="token function">npm</span> <span class="token function">install</span></code></pre>
+
+<p>在这一切执行完毕后，你可以通过在git bash中输入以下指令，于本地启动hexo服务器。这时便可以打开浏览器，在地址栏中输入localhost:4000，来看到本地的网页了。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre>
+
+<p>此时，浏览器中的Hexo页面大致是这样：</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQM3Nt.png" alt="Hexo页面"><em>默认的模板或许不太好看，但它是梦开始的地方</em></p>
+<p>此时，bash界面显示以下信息时，说明操作正确。</p>
+<p><code>INFO Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</code></p>
+<p>之后，可以在bash界面按下Ctrl + C关闭本地服务器。</p>
+<h4 id="常用到的Hexo命令"><a href="#常用到的Hexo命令" class="headerlink" title="常用到的Hexo命令"></a>常用到的Hexo命令</h4><p>更多的指令可以在Hexo官方提供的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">文档</a>查询，以下列出常用的指令并简单介绍其含义。</p>
+<ul>
+<li>hexo s : 等价于 hexo server #开启本地的hexo服务器，你可以在更新远端博客页面前，先于本地测试效果。hexo服务器会监视文件变动，并自动更新，除了修改站点配置文件外，无须重启服务器，直接刷新网页即可。</li>
+<li>hexo g : 等价于 hexo generate #生成静态网页，执行后，hexo会在站点根目录下生成public文件夹，hexo会将位于”博客根目录\source”下的.md后缀的文件编译为.html后缀的文件，存放在”博客根目录\public”的路径下。</li>
+<li>hexo d : 等价于 hexo deploy #将本地数据部署到远端服务器</li>
+<li>hexo clean : 清除缓存，在网页正常的情况下可以忽略这一指令，执行后，会删除根目录下的public文件夹</li>
+</ul>
+<p>至此，我们完成了本地环境的搭建。</p>
+<h2 id="远端环境配置"><a href="#远端环境配置" class="headerlink" title="远端环境配置"></a>远端环境配置</h2><h3 id="创建Github-Page仓库"><a href="#创建Github-Page仓库" class="headerlink" title="创建Github Page仓库"></a>创建Github Page仓库</h3><blockquote>
+<p><font color = red>Github</font>作为全球最大的开源社区(程序员交友平台)，在这里，你可以托管你的项目并基于git进行版本控制。</p>
+</blockquote>
+<p>要创建Github Page仓库，你首先得拥有github账户。访问<a target="_blank" rel="noopener" href="https://github.com/">github</a>并注册一个账号，登录后，新建一个代码仓库。</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQUElR.png" alt="新建一个代码仓库"></p>
+<p>这个仓库将用来托管你的页面，<font color = red>切记</font>，Repository name后面的格式是：你的名字.github.io。如，我的Github的名字是NickAdans，那么这个页面仓库名字即为：NickAdans.github.io。选择仓库为Public(不会真有人想托管一个仅自己可见的博客吧)，同时，README的初始化选项也要勾选，最后，请点击Create repository，具体操作步骤如下图所示。</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQUocR.png" alt="操作过程"></p>
+<h3 id="选择一个github-page主题"><a href="#选择一个github-page主题" class="headerlink" title="选择一个github page主题"></a>选择一个github page主题</h3><p>点击刚才创建的代码仓库，进入仓库页面后，点击Settings</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQaY8J.png" alt="Settings在这里"></p>
+<p>下拉Settings页面，找到Github Page这一项，点击Choose A Theme</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQaOrq.png" alt="选择主题"></p>
+<p>随便选择一个让你看得舒服的主题即可，请注意，这并不是你页面的最终主题和样式，之后，它将会被Hexo生成的页面，以及Hexo使用的主题所覆盖。</p>
+<p>至此，Github已经为你托管了一个名为：你的github用户名.github.io的页面。现在，你可以通过https://你的github用户名.github.io这个网址访问它，不出意外，它的样子应该和你选择的Github主题一致。</p>
+<p>在这之后，我们需要将其与本地的博客页面相关联。这意味着把本地的代码托管到Github上，每当你更新自己的博客，不论是设计页面，或是发表文章，你都应在最后使用Hexo g生成静态页面，并通过Hexo d，将本地的代码及时部署到云端服务器上。</p>
+<h3 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h3><h4 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h4><p>在你本地的博客文件夹下，右击鼠标，点击Git Bash Here，输入以下命令：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">git</span> config --global user.name <span class="token string">"你的Github用户名"</span>
+$ <span class="token function">git</span> config --global user.email <span class="token string">"你的Github账户所关联的邮箱"</span></code></pre>
+
+<p>然后，输入生成密钥的命令：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ ssh-keygen -t rsa -C <span class="token string">"你的Github账户所关联的邮箱"</span></code></pre>
+
+<p>之后会出现Generating public/private ras key pair等文字，直到提示Enter file in which to save the key这句话时，敲击回车键，将密钥以默认方式存储。</p>
+<p>敲击回车后，会出现Enter passphrase (empty for no passphrase)这句话，这里只需要敲击回车继续即可。</p>
+<p>接下来，会出现一大堆由字母数字符号组成的字符串，我们输入以下命令，将其复制到剪切板上。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ clip <span class="token operator">&lt;</span>~/.ssh/id_rsa.pub</code></pre>
+
+<h4 id="设置Github-SSH-Key"><a href="#设置Github-SSH-Key" class="headerlink" title="设置Github SSH Key"></a>设置Github SSH Key</h4><p>回到你的github主页，在你的用户头像下点击Settings，如图所示：</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQ0bxH.png" alt="点击头像的Settings"></p>
+<p>找到SSH and GPG keys这一栏，点击New SSH key，把剪贴板里的SSH Key复制到其中，之后点击确定即可，结果如下图所示：</p>
+<p><img src="https://s3.ax1x.com/2021/01/09/sQBFMj.png" alt="复制SSHKey"></p>
+<h4 id="本地连接Github"><a href="#本地连接Github" class="headerlink" title="本地连接Github"></a>本地连接Github</h4><p>在博客根目录下打开Git Bash，输入以下命令，如果出现你的用户名，说明连接成功。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ssh</span> -T git@github.com</code></pre>
+
+<p>接下来，输入以下命令，安装hexo-deployer-git插件，这个插件能够方便我们快速部署页面。</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git</code></pre>
+
+<p>安装完后，用记事本打开位于博客根目录下的_config.yml文件，这个文件是Hexo的整体配置文件，我们需要修改其中的#Deployment为如下内容：</p>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Deployment(#表示是注释)</span>
+<span class="token comment">## Docs: https://hexo.io/docs/one-command-deployment</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>你的github用户名/你的github用户名.github.io.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> main</code></pre>
+
+<p><font color = red>切记</font>，.yml格式的文件内容需严格遵照yaml语法格式书写，在修改的过程中，请参考文档内的其他书写方式，或者简单学习相关的知识，特别是注意空格！</p>
+<p>如deploy下的第二行为：<font color = red>空格空格</font>type:<font color = red>空格</font>git。</p>
+<p>至此，我们完成了远端环境配置。</p>
+<h2 id="推送文章到github上"><a href="#推送文章到github上" class="headerlink" title="推送文章到github上"></a>推送文章到github上</h2><p>经过以上步骤，我们完成了在本地的博客与托管在github上的代码仓库(页面)的配置和关联。在这之后，我们可以尝试着写一篇文章，并发布到你的页面上去啦！</p>
+<p>在博客根目录下，右键打开Git Bash，输入以下命令，新建一篇文章：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new post <span class="token string">"文章的名字(标题)"</span></code></pre>
+
+<p>你可以在博客根目录下的source\_posts文件夹里找到你刚新建的文章，它以.md格式存储，这说明其使用的是<font color = red>Markdown</font>语法。如果你不会Markdown语法，这里强烈建议你学习一下，Markdown语法轻松易懂，方便快捷，而且利于排版，当然，本篇文章也基于Markdown语法书写。</p>
+<p>如果你没有对应的Markdown的编辑器，你可以使用<a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a>，一个所见即所写的markdown编辑器来书写你的文章。</p>
+<p>在编写完文章后，回到根目录下，打开Git Bash，输入hexo s在本地的localhost:4000预览效果，预览完毕后，输入hexo g生成相应的静态网页。最后，输入hexo d，将你的页面上传到github上。</p>
+<p>现在，你可以访问https://你的github用户名.github.io这一网站来查看你的页面啦，不出意外的话，它将不再是你最初选择的Github Theme，而是你使用hexo s时所预览的样子。</p>
+<p>当你完成了这一步后，你已经实现了个人的博客搭建，并且可以轻松地完成文章的发布任务啦，之后的内容将介绍如何个性化配置你的博客页面。</p>
+<h2 id="配置个性化域名"><a href="#配置个性化域名" class="headerlink" title="配置个性化域名"></a>配置个性化域名</h2><h3 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h3><p>相信你一定会问这么一个问题，能不能使用自己喜欢的域名，比如：今天天气很好.com，而不是又长又难记的啥啥啥.github.io呢？当然可以！</p>
+<p>首先，请注意，域名(或许更通俗的说法是网址)的格式是有一定限制的，比如，你不可以使用<a href="www.baidu.com">www.baidu.com</a>这一域名，这是由于这个域名已经被他人拥有了，这就跟你起一些网站，如github的名字一样，要求必须是独一无二的。</p>
+<p>同时，申请域名需要缴纳一定的金额，而这个金额与你所申请的域名长度、易记程度、后缀以及申请的平台息息相关。你需要到相应的网站(如阿里云，腾讯云等)上申请合法的域名，我是在腾讯云注册的域名，如果你也想像我这么做，可以参考腾讯云提供的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/242/9595">文档</a>。</p>
+<p>域名注册完后，需要经过一定时间的审核，审核完成后，这个域名在相应的期限之内就属于你啦。</p>
+<h3 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h3><p>在拥有域名后，你需要与自己的网页相关联。你可以去网站上搜索相应的解析步骤，如果你选择的是腾讯云，可以参考腾讯云提供的<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/242/8584">文档</a>。</p>
+<p>在解析域名的步骤完成后，你的github page就和你所申请的域名关联在一起了，在这之后你就可以输入你的域名直接访问这个页面啦。比如，我申请的域名是nickadans.com，这个域名通过腾讯云提供的服务解析了我的github page，这样我就不用再输入nickadans.github.io(当然非要输入这个也可以)来访问自己的博客了。</p>
+<h2 id="个性化主题和样式"><a href="#个性化主题和样式" class="headerlink" title="个性化主题和样式"></a>个性化主题和样式</h2><p>尽管Hexo为我们提供了一个十分经典的主题，但它的风格或许会让你遭不住，没关系，Hexo鼓励使用者创作自己的样式和主题。（但这不意味着我也鼓励你这么做，尤其是你对前端设计一窍不通的情况下！）</p>
+<p>访问Hexo官网的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题页面</a>，你可以看到成百个主题模板，点击你感兴趣的图片，就可以进入相应的博客查看效果，而点击图片下方的名字则可以进入开发者提供的github代码仓库。还想什么呢，选一个喜欢的模板，套就完事啦！</p>
+<p>在代码仓库的README.md里一般会提供该主题完整的配置和使用文档(甚至还有开发文档!)，你可以参照着开发者提供的文档一步步地配置你所喜欢的主题，让其更贴切自己想要的色彩和形式。或许到了这儿，才要经历最花时间的事情噢。好好努力吧！</p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>至此，使用Github page和Hexo搭建静态的个人博客的完整流程就结束啦！</p>
+<p>我的主题使用的是<a target="_blank" rel="noopener" href="https://github.com/Siricee/hexo-theme-Chic">Chic</a>，感谢开发者辛勤的努力和优雅的设计，让我用上了这么棒的主题！</p>
+<p>希望这篇文章对大家有所帮助，也期待大家拥有自己的网页，书写自己的故事，分享生活的点滴。</p>
+<p>文章中难免有不全面的地方，初学者想必会觉得困难，如果在文章中遇到了疑问，或者文章内容错误/有遗漏的地方，欢迎在以下评论区留言，我将及时地更正内容并回复，感谢大家！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>NickAdans</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://nickadans.com/2021/01/09/%E4%BD%BF%E7%94%A8GithubPage%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">https://nickadans.com/2021/01/09/%E4%BD%BF%E7%94%A8GithubPage%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/github-page/"># github page</a>
+                    
+                        <a href="/tags/hexo/"># hexo</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/07/28/%E5%B0%8F%E7%8B%97%E5%A4%9A%E5%A4%9A/">小狗多多</a>
+            
+            
+            <a class="next" rel="next" href="/2021/01/07/%E7%90%86%E6%83%B3%E4%B8%BB%E4%B9%89%E8%80%85%E5%9C%A8%E6%9E%97%E4%B8%AD/">理想主义者在林中</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© NickAdans | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

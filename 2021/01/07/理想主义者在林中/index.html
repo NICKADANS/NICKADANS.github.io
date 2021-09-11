@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="NickAdans">
+
+
+
+
+
+<title>理想主义者在林中 | Nick&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">NICKADANS</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">NICKADANS</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">理想主义者在林中</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">NickAdans</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">一月 7, 2021&nbsp;&nbsp;21:35:27</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="理想主义者在林中"><a href="#理想主义者在林中" class="headerlink" title="理想主义者在林中"></a>理想主义者在林中</h2><blockquote>
+<p> “这一年，也做一位成熟的理想主义者。”</p>
+<p> ——2020年元旦，写于朋友圈</p>
+</blockquote>
+<p>每逢新的一年，我总会写点什么，在长篇大论中回顾过去，同时也对新的一年展开自己的设想和期待。</p>
+<p>在过去的一年里，我对自己的选择产生了深刻的疑问，对自己和他人，我憋足了话想说。白天的时光里，即使没有在学习，我也鲜有时间来整理这些话，而到了夜里，这种被抑制的感情如山洪一样，伴随着对这种日复一日无趣生活的痛恨，一齐涌入我的脑海。</p>
+<p>这样的结果就是，近三个月无眠的时光里，我都在深夜里不断地记录，并与自己搏斗。</p>
+<p>那样的夜晚里，我殷切期待着有一处自己的空间和一段可供自己自由支配的时间，来分享和消化这种感情，它不是宿舍，也不是家，因为我并不缺少倒苦水的地方，我想表达的，是对过去大学生活中自身价值体系的重新审视，分解，以及重构的过程和感受。</p>
+<h3 id="理想主义者在成熟"><a href="#理想主义者在成熟" class="headerlink" title="理想主义者在成熟"></a>理想主义者在成熟</h3><p>尽管对那样的生活充满了担忧，在一切尚未开始之前，我仍尽量乐观地去看待考研，并且尽可能地发挥自己的主观能动性去准备书籍和复习的习题。去年的开始，我便坚信忍受当下的生活是通往未来美好生活的前提，并把这份忍受称之为“成熟”。</p>
+<p>同时，我也把进入大学后，一贯期待的美好生活，也即一种安宁的，温柔的岁月，姑且可以称为田园牧歌式的生活，作为自己的理想，并这么称呼自己——一位理想主义者。</p>
+<p>怀揣着一份诗歌般的理想，用一套圣人推崇的方法论，我投身到考研的漩涡中，并在其中饱受煎熬。</p>
+<h4 id="一次思考"><a href="#一次思考" class="headerlink" title="一次思考"></a>一次思考</h4><blockquote>
+<p>“唯一的问题是，我打算成功到什么地步，才肯停下来，去追求一种很平静，却又喜欢的生活呢？”</p>
+</blockquote>
+<p>或许朦朦胧胧的成熟，是从三月底开始的。那时候考研的压力还未很大，我在冲击炉石天梯月榜，这一过程十分煎熬，我屡屡受挫，并感到十分沮丧。我花了一晚，把这种感情整理了一下，写了一篇文章<a target="_blank" rel="noopener" href="https://user.qzone.qq.com/1179021699/blog/1584642302">《炉石，数字和生活》</a>来记录它，并在文章中联想到了自己考研的决定，这是我第一次无意触碰到这一年里生活的核心问题，在引起我足够多的重视之前，它就已经扎根在我心底了。</p>
+<h4 id="一次碰撞"><a href="#一次碰撞" class="headerlink" title="一次碰撞"></a>一次碰撞</h4><blockquote>
+<p>“我多么希望你们说的这句话是真的，我也想像你们一样，在未来的某一天和好朋友聊天时，也能这样平静的说出这句话，但我心里清楚无比，你们的平静的生活，只不过把那种期望，放在了二十岁的，对未来有另一番打算的我身上。”</p>
+</blockquote>
+<p>四月份，我第一次主动地跟父母提出对考研这一决定的质疑，执拗的我们没有说服彼此，而谈话也在我思考如何表达时戛然而止，闷闷不乐的我随即写下了一篇文章(即<a target="_blank" rel="noopener" href="https://user.qzone.qq.com/1179021699/blog/1587314352">《如露亦如电》</a>)，但在第二天醒来，我很快屏蔽了所有人，只让自己看到这篇文章。尽管彼时我已从朦胧的思考中揪出了考研目的这一关键变量来，但自己仍不愿深入思考这个问题，因为它只让我觉得烦躁，觉得自己忤逆了父母，伤害到了他们，也背离了自己考研的初衷。我一度想删掉这篇文章，因为它是我感性，冲突时的造物之典型，其中不乏夸大和富有感性色彩的成分，或许是由于设定了仅自己可见而没有产生更大的影响，我没有做更多的编辑和操作，从而保留到了考研生活的末尾，并再次把它公开出来。</p>
+<h4 id="一次误解"><a href="#一次误解" class="headerlink" title="一次误解"></a>一次误解</h4><blockquote>
+<p>“高中参加物理竞赛时那种相对纯粹的，对做学问的事业的尊重与期待，也构成了如今我对读研的期待。”</p>
+</blockquote>
+<p>等我再去想这个问题时，已经是八月了。生日那天，我和好朋友们一起去逛老街，在寺院里看孩子们喂鸽子，一块吃了一餐地地道道的家乡菜，又溜达到了世界城去喝下午茶，那是我们去年的最后一聚。那晚我带着很轻松惬意的心情回家，迎接我的是熟悉的亲人和亲戚们，我们一起吃了丰盛的晚饭，上楼后，怀着温柔又喜悦的心情，我写下了<a target="_blank" rel="noopener" href="https://user.qzone.qq.com/1179021699/blog/1597849137">《obscure-2》</a>。文章里，我犯了一个关键的错误——我自以为是地误解了我真正喜欢的事情，以及喜欢的程度，而这是我这一年来，甚至可以说是大学以年来一直在犯的错误。</p>
+<h4 id="一次爆发"><a href="#一次爆发" class="headerlink" title="一次爆发"></a>一次爆发</h4><blockquote>
+<p>“如果人生是有后悔药的话，我现在或许就会后悔，我会回到哪一年呢，高中竞赛吗，还是大学转专业的时刻，又或者是决定考研的前一年——当我在图书馆写代码题时，我要不要把手从键盘上挪开，然后告诉自己，好好想想，你到底渴望什么呢？”</p>
+</blockquote>
+<p>回学校的很长一段时间里，我迅速积累起对考研的不满，而我总是不露声色地抑制着它。</p>
+<p>终于，十月底，仅剩两个月的警钟敲响，复习进度的拖延，保研所受的阻碍与课业压力的累积，我抑郁的情绪终于如数爆发。在总结<a target="_blank" rel="noopener" href="https://user.qzone.qq.com/1179021699/blog/1603126817">《distorted[11.21]》</a>里，我质问行将毕业的自己过去所作的种种选择。曾经那份理想里的美好生活随着我对考研结果的希望渺茫，将会渐渐走向幻灭。我几乎无比清楚，如果我没考上，我大概率会失去一个很好的工作机会，父母他们根本意识不到秋招有多重要，对我有多重要。</p>
+<p>如果你们无比支持我做自己的决定，又为什么非要让我参加考研？如果我不参加考研就能获得我一直以来想要的生活，为什么我自己也没有早点放弃，而是听信你们，几乎任由你们替我决定好，选择一条我根本接受不了的道路？</p>
+<p>如果我只问了自己前半句的问题，那么这里又会像《如露亦如电》的结果一样。感性的想法，让我一瞬间对父母和环境充斥着极大的敌意，当我醒来，我会懊悔地把这些话归于感性的产物，并从此置于脑后。真正让我成长的，是回答后半句的疑问，也是我在实践考研的过程中，逐渐解释和清楚的东西——一份遗世独立的追求。</p>
+<p>几年来的岁月，也在这两个月里，沉重地悬挂在了我的头上。面对这些岁月和它所带来的沧桑感，压迫感时，我也在做一些尝试。</p>
+<h3 id="理想主义者在林中-1"><a href="#理想主义者在林中-1" class="headerlink" title="理想主义者在林中"></a>理想主义者在林中</h3><h4 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h4><p>为了确认自己还有几斤几两，听说联通来学校招聘，而且是一次就出结果，我决定抽出一天去面试中国联通。</p>
+<p>面试十分顺利，在现场的我几乎没有付出任何努力就拿到了offer，但在签三方的时候我没有马上同意，我决定回宿舍想想。其实我并不太关心它的工资多少，尽管我的好朋友和舍友们都觉得太低了，对我而言，其实如果真如HR所述，倒也不是一文不值。</p>
+<p>我更看重它955的工作制度，如果你少付20万，却能换来这样的时间，我觉得自己可能最终还是愿意这么交换。毕竟在当时考研的我看来，最重要的，就是可供自己支配的时间，考研意味着007，你除了睡着以外的时间，做任何事都得顶着考研的压力。这样的话我没有跟母亲说，而是以工资太少，也就是大家一致同意的话来告诉她自己拒绝的理由，我想母亲听到我真实的想法后，一定该这么评价吧——“孩子气”。</p>
+<p>不过好在后来我找到了更加充分的理由，它说服了自己拒绝了这个offer。这件事在几天后的一个微信电话中结束了。HR人很好，明知道我心意已决，仍鼓励我明年或读研后再作尝试。我不愿意把这个理由的细节公开，大概的情况就是，如果你考虑进入一家公司，你就应该对将做的事情做充分的了解，并基于此做出决定。</p>
+<h4 id="入党"><a href="#入党" class="headerlink" title="入党"></a>入党</h4><p>一直以来，我都认真地考虑过这件事情，为此也做了很详尽的准备。其实我认为这件事是十分庄严的，当然倒不至于给它用上神圣这种富有神秘色彩的词语，但是如果要说的话，一定是十分严肃的。</p>
+<p>读毛选的时候，我能切身感受到百年前的那种革命信念和热情，教员的这些记录既严谨又生动，实实在在地反映出了当时的景象，他的思考细致入微，由表及里，这也启发了我的思考。有时候睡不着的夜里，我会看一两篇，起初我把它当政治的必修读物来看，但后来我慢慢有了更加深刻的体会，当然，也坚定了自己的决心。</p>
+<p>如果放在去年来看，这是我去年做的最正确的决定。</p>
+<p>如果放在过去的岁月里看，这也是我过去的日子里做的最正确的决定。</p>
+<p>我不希望在公开场合里过多谈及政治，不过我希望藉此表明态度。</p>
+<h4 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h4><p>睡不着的时候，我会想很多事情。</p>
+<p>母亲老是在我耳边提竞赛时自己有多努力，多积极，而我在考研中却全无那样的感觉。因此，我睡不着的时候，也会回忆起高中竞赛时候的日子。</p>
+<p>我一直以为自己是喜欢物理竞赛，才那么做的，事实上，除了对竞赛、思考和科研的兴趣或志向以外，当时我也希望自己通过竞赛走向一条实现个人价值的道路，或者说，为他人留下点什么的道路。</p>
+<p>随着竞赛的失利，我回到高考，扛起承担家庭的责任来，在这样的岁月里，随着外公的病情逐渐加重，母亲换工作时所遭遇的情况，我慢慢转而渴望一种”温柔，安宁“的生活。当然，这样的生活追求有其好处，那就是我不断降低了自己幸福的阈值，能从平静的生活里获得丰富的喜悦，但同时它也蒙蔽了我自己心里的一些想法，让我不知道该如何坦诚地面对自己的死亡——当意识到它的时刻，我总是猛地哆嗦一下，一种生命的震颤感让我坐立不安。</p>
+<p>人生总是十分之短暂的，而且我也相信，人的一生就是唯一的一生，那当然也是最后的一生。我对神秘的世界并没有什么额外的期待，所以希望自己能够在有限的生命里做点什么。最能让我接受的看法，或许还是年少时自己那种“个人价值与社会价值相统一”的想法吧。</p>
+<p>我就在与过去的比较中，渐渐重新又期待自己成为一名研究生，这样自己未来或许就可以真的去做点力所能及的，对社会和他人有益的事情，尽管这些事在企业或许也能做到，我希望自己不只是停留在这一圈子。</p>
+<p>这样一来，似乎我和参加竞赛，也就是四五年前时候的自己又没什么两样了，但其实并不是的，否定之否定的规律在我的身上起到了很好的作用，在经历了双重的否定之后，我在生活里既看到了温柔的，美好的一面，也重新去寻找，尝试开拓自己积极的，理想的一面了。</p>
+<h4 id="最后的考研"><a href="#最后的考研" class="headerlink" title="最后的考研"></a>最后的考研</h4><p>等我回到稳定的考研生活中，大概是十一月底，那时候，我终于把除了考研外的事情忙完了。</p>
+<p>经过了共产主义的崭新洗礼，也经过自己对过去的不断扬弃后，我感到心里十分清澈，那种痛苦和冲动也慢慢冷静下来了。我和父母每周视频一次，聊到考研的时候，他们仍很担心我的身体和心理情况，尤其是父亲，他总跟我说，如果觉得心里受不了或者睡不着觉，健康受到了损害，就放弃吧，就别再折磨自己了。母亲一直都没有表达这个态度，她告诉我，事到如今，再放弃说不过去。</p>
+<p>我有自己的考虑。</p>
+<p>视频里，我说，如果这一年有很多别的机会，那也已经被我耗尽了，如今已经到了最后一个月，我所拥有的，也只剩下考研这个机会了。这句话，既是说给母亲听的，是说给父亲听的，当然也是说给我自己听的。我劝父亲，说就算自己不太喜欢考研这个事情，我也会坦然做完它的，充分发挥手中的机会，总比什么都不做，茫然地结束这一年好。最后一个月的考研对我来说，反而是这一年生活中最好的时光了，这时候我已经没有别的机会可拥有，所以只需要专心准备这个，而不用担忧任何其他的诱惑。同时，我也几乎没有任何的心理压力，即使失败了，对我来说，也不过是顺其自然地来到下一年，等待新的机会出现罢了，何况，我已经从考研的岁月中找到了最宝贵的东西，至于考研结果的影响，已没有自己先前想的那么重大了。</p>
+<p>这段时间里，我每天都过得愉快，充实。我依然每天九点多起，甚至十点起，玩一会去教室，然后学到晚上十一点回来，写完日记倒头就睡，在最后的两三天里，我抽空和室友一起玩星际争霸，还看完了《Fate Stay Night 06版》这一部动漫。总的来说，考研的压力对我来说微乎其微，或许我做的最认真的一件事就是控制自己的饮食，让自己吃得十分不错又不影响复习状态。说来，直到最后我还是不喜欢考研的生活方式，因此也很难让自己浑身解数去投入到模拟卷和习题里，我所做的，只是把考研当作一个跳板而已，对这件事情，一直以来我并没怀有什么友善的感情。</p>
+<h4 id="林中的理想主义者"><a href="#林中的理想主义者" class="headerlink" title="林中的理想主义者"></a>林中的理想主义者</h4><p>回来后，我开始一件一件地完成日记上的事情。我首先做的，就是创造这么一个空间，来记录自己的想法，这是我考研的日子里无比期盼的事情，也是在考研的第一篇日记就提到的事情，于是，我们便以这样的方式见面了。</p>
+<p>如今，我喜欢以“在林中”这个意象来描述自己，因为自己此刻就像身处于清晨寂静的森林里，周围朦胧的迷雾正渐渐地消失，在森林里，四面八方都涌动着光线，但你只能朝着一处走。尽管我已经在过去的一年里明确了自己的人生观和价值观，但今后的自己将通过何种方式行往自己的目标，仍是一个未知的迷。</p>
+<p>新的一年里，无论是朝着树叶飘舞的方向，还是顺着踩踏而成的林荫小路前行，我总希望，自己能走出这片森林。</p>
+<p>这一年，就以一名林中的理想主义者开始。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>NickAdans</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://nickadans.com/2021/01/07/%E7%90%86%E6%83%B3%E4%B8%BB%E4%B9%89%E8%80%85%E5%9C%A8%E6%9E%97%E4%B8%AD/">https://nickadans.com/2021/01/07/%E7%90%86%E6%83%B3%E4%B8%BB%E4%B9%89%E8%80%85%E5%9C%A8%E6%9E%97%E4%B8%AD/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%90%86%E6%83%B3%E4%B8%BB%E4%B9%89/"># 理想主义</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/01/09/%E4%BD%BF%E7%94%A8GithubPage%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">使用Github Page + Hexo搭建静态个人博客</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© NickAdans | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

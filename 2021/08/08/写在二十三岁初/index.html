@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="NickAdans">
+
+
+
+
+
+<title>写在二十三岁初 | Nick&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">NICKADANS</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">NICKADANS</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">写在二十三岁初</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">NickAdans</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">八月 8, 2021&nbsp;&nbsp;2:08:31</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="写在二十三岁初"><a href="#写在二十三岁初" class="headerlink" title="写在二十三岁初"></a>写在二十三岁初</h2><p>二十三岁到来的这一刻，我首先从过去的点滴中回望自己。</p>
+<h3 id="研究生"><a href="#研究生" class="headerlink" title="研究生"></a>研究生</h3><p>考上研并未出乎我的意料，尽管它让我感到十分高兴，但却没有为我带来多大的成就感，仿佛命运已然向我昭示——选择大于努力。</p>
+<p>尽管在生活里我已经做过了许多次选择，在利好自己的这方面，或许我确实也这有块料——每当我任着性子故意不去做某些事，那些被错过的事都对未来埋下了伏笔，它们总让我承受了更多的煎熬，仿佛在惩罚我未曾选择它们一样。我可以不断翻旧账，把没选容易刷绩点的课，把没积累更多的资源和人脉以拿到更多的德育分来老调重弹，就好像我从来没有问过自己，你早知如此，当初为什么不这么做呢？</p>
+<p>要搁一年前，我想自己会义正言辞地说：我只想读自己理想中的大学，去选自己感兴趣的课，考前不需要刷题就能上考场，然后读上三百本课外书，蹭分的行为我可看不上！</p>
+<p>可其实哪有那么多所谓上升到道德不道德的事情呢？直到考研的过程中，我才明白自己其实完全抱着一种奇怪的道德观度过了大学的前三年：多看篮球赛难道不道德吗？刷点题又有什么不对呢？你每天练练字，做做摘抄就能成计院的三好学生了吗？</p>
+<p>我本来想以“问心无愧”作为大学本科生活的总结，但实际上对大学的前两年，我仍然抱有一些复杂的情愫在里头，倘若我问心有愧呢？</p>
+<p>考研无疑是我最后的选择，很好笑的是，参加内卷尤为剧烈的考研，我的目的却是希望自己能够挣脱内卷——我想只有读研才能避免从读书开始一路卷到互联网和学区房去，说实话我已经厌倦了这种生活：一个人的优秀永远要以比下另一群人为参照。我希望能跳出这个可怜的评价体系，去做实在又有意义的事情。</p>
+<p>我的毕设老师曾聊到一番让我印象深刻的话，他说做科研这种事，我们也别说非要做出多大的成果，只要自己做的微薄之力能为后来的研究者提供一些值得参考的资料，那么这些研究也就有了意义。我觉得这就是科研的最高态度，希望我未来三年里的研究生生活中能秉持这个态度，严肃认真地对待科研，并胸怀着利他之心吧。</p>
+<h3 id="冬马和纱"><a href="#冬马和纱" class="headerlink" title="冬马和纱"></a>冬马和纱</h3><blockquote>
+<p>梦里不觉秋已深，余情岂是为他人</p>
+</blockquote>
+<p>在理想的爱情中，我喜欢像冬马和纱一般帅气的女性，深情并傲气。</p>
+<p>白色相簿的动画里，看到春希在笨拙地弹奏<em>White Album</em>，冬马在隔壁用钢琴轻轻为他伴奏，用琴声帮助和鼓励春希。多么浪漫的一幕！</p>
+<p>说实话，对一个二十多年来还没有女朋友的人而言，谈及爱情真是一件很狼狈的事。我其实很想用自己一贯说的，没找女朋友的打算呀，或者说有更重要的事情呀balabala，来推脱来自他人和自己的疑问。然而事实上，我还蛮憧憬能有一位相互理解的恋人，能一块儿谈心，一块儿进步。所以和爸妈聊天的时候，我也夸口说，快啦快啦，下学期就找到了。这种说法就像是读小学时，每学期在表达目标的纸上充满雄心壮志地写下“今年我要考第一”一个样，等写完把纸一交，便从此音讯全无了。</p>
+<p>在和邱哥一起看论坛的征友贴时，我们聊到不太感兴趣只有输入型爱好（如美食、旅游、健身）的女性，更喜欢一些有着输出型爱好（音乐、文学、艺术）的女性。可是大多时候，我依然觉得谈恋爱并没有那么多的门槛，仿佛大家都是彼此看对眼就足够在一起了，只有在后续的了解中才能发现对方的闪光点。</p>
+<p>扬扬大一时候说，鑫彬在恋爱方面点满了被动技能。未来，面对让自己心动的女孩子，我要更加勇敢一些。</p>
+<p><img src="https://z3.ax1x.com/2021/08/08/flXTTe.png" alt="冬马和纱手绘"></p>
+<center>图1.冬马和纱手绘</center>
+
+<h3 id="星际争霸"><a href="#星际争霸" class="headerlink" title="星际争霸"></a>星际争霸</h3><p>星际争霸从钻石到大师的过程，让我久违地感受到得偿所愿的喜悦。</p>
+<p>在所有游玩过的游戏里，我尤其喜欢星际争霸。在我看来，它是一个能始终鼓励着你进步，并让你在点滴进步中不断完善自己的游戏。我喜欢用乐器来比喻它，也喜欢拿五子棋、象棋等竞技类的棋类游戏与之类比。我想，大多数人们在学习演奏乐器或下棋的时候，都不是奔着靠着它吃饭的目标去的，大多数人都会把这件事当作为培养一门兴趣来看，美其名曰，培养一项“闲情雅致”。话虽如此，但在实际的学习过程中，取法乎上，得乎其中；取法乎中；得乎其下。我始终坚信，一个人如果希望把某件事做好，那就必须尽自己所能去做好它。如果你下棋不记定式，每天不腾出时间来练琴，那么你只不过是拥有了一个自我感动的兴趣，或者停留在一个极为肤浅的水平。</p>
+<p>从钻石到大师的过程其实并不能算艰难，但比起考研和其他让我不得不靠着运气得到的成果而言，爬天梯过程中的每一分都显得来之不易。在这个游戏中，你可没有任何值得抱怨的事情，除了只想赢下比赛的你和你的对手以外，没有任何因素会影响比赛的结局。事实上，我远没有在这个游戏上爆发出我在炉石上花的精力(当时为了打上炉石天梯的前两百名，我曾每天坚持打8-10个小时)。这几个月里，我坚持每天腾出一两个小时，把它作为一项真正的兴趣培养。尽管最终的目标是达到大师分段，我并不急于求成，而是要求自己能在每个阶段学到更多的东西：学习更好的应对方式、从侦察中获取更多的信息、操作得更加细腻、把运营流程走得更完美。</p>
+<p>在钻一到大师的过程中，我回放对局的录像，从中寻找自己的细节疏忽；我添加对手好友，虚心向他们请教，并和他们一起私下重复地练习；我记忆职业选手的流程，把它们在模拟战里不断的精进……我很高兴地看到自己的进步，尽管我每天依然只花上不那么多的时间，但它们让我在不同的指标上慢慢向这个结果逼近。</p>
+<p>对于成年人而言，每天抽出时间去掌握和主业无关的兴趣，我想是件很奢侈的事情。可是我不愿自己的生命总被限定在条条框框里，我渴望自己能够有深刻的思想和独立的灵魂，而想到达到这一目标，我就首先需要一份留给自己的时间。坚持练习星际是我的一次尝试，虽然大师分段只是这个游戏的入门级水准，但正是在这段难忘的经历中，我坚信自己能够支配好时光，并能做好任何一项其他感兴趣的事情。</p>
+<p><img src="https://z3.ax1x.com/2021/08/08/fQKew4.png" alt="国服大师!"></p>
+<center>图2.我上大师啦!</center>
+
+<h3 id="日记"><a href="#日记" class="headerlink" title="日记"></a>日记</h3><p>在那些平凡的岁月中，我把自己藏在了日记里。</p>
+<p>每一天睡前，我就像记录流水账一样，把一天发生过的事情写下来，并在其中附上关于感情的描述，像是在为文字上色。</p>
+<p>“把自己抽离出来，从第三方的视角观察自己，用文字记录下来”，我的一位朋友有过这么一段描述。</p>
+<p>在考研的这一年里，我开始渐渐减少自己向外的表达（过去我喜欢写阶段总结，权且认为是向外的表达吧），更多的时候，我总是喜欢和自己对话。在和自己分享生活点滴的时候，我还需要对未来负责。尽管这些刚刚记录下来的文字，都是新鲜的、熟悉得不能更加熟悉的事，只要我轻轻闭上眼，它们就会像刚刚发生一样，一幕幕在脑海里回旋，但我又希望未来的某一天，我也能通过这些文字，重新回到这一瞬，并实在地感受到当时自己的所思所想。</p>
+<p>于是，记日记对我来说，就是过去、现在和未来交织的惬意一刻。我一边看着它，回想着它，一边叙述、刻画和表达它，并从情感里寻找最真实的自己。</p>
+<p><img src="https://z3.ax1x.com/2021/08/08/fQK36K.jpg" alt="答辩前夜"></p>
+<center>图3.答辩前夜</center>
+
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>在这一年里，是我的舍友们陪伴着我度过最漫长的日日夜夜。和他们在一起生活的日子，是大学以来度过的最幸福的时光。文末，我仍想再次感谢我的舍友们，能与他们一块生活和成长，和他们的思想进行碰撞与交融，是我本科生活中最大的幸运。</p>
+<p>未来一年，我依然会是一名坚定的理想主义者。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>NickAdans</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://nickadans.com/2021/08/08/%E5%86%99%E5%9C%A8%E4%BA%8C%E5%8D%81%E4%B8%89%E5%B2%81%E5%88%9D/">https://nickadans.com/2021/08/08/%E5%86%99%E5%9C%A8%E4%BA%8C%E5%8D%81%E4%B8%89%E5%B2%81%E5%88%9D/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%94%9F%E6%97%A5/"># 生日</a>
+                    
+                        <a href="/tags/%E7%90%86%E6%83%B3%E4%B8%BB%E4%B9%89/"># 理想主义</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/09/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习笔记</a>
+            
+            
+            <a class="next" rel="next" href="/2021/07/28/%E5%B0%8F%E7%8B%97%E5%A4%9A%E5%A4%9A/">小狗多多</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© NickAdans | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
