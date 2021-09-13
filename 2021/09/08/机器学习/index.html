@@ -388,9 +388,9 @@
 <center>图2.逻辑神经元</center></li>
 <li><p>激活函数：<br>$$<br>g(z)=\frac{1}{1+e^{-z}}<br>$$</p>
 </li>
-<li><p>神经网络示意图：</p>
+<li><p>神经网络示意图(正向传播)：</p>
 <p><img src="https://z3.ax1x.com/2021/09/12/4pWmiF.jpg" alt="4pWmiF.jpg"></p>
-<center>图3.逻辑神经网络</center>
+<center>图3.逻辑神经网络架构</center>
 
 <ul>
 <li>x<sub>0</sub>、α<sub>0</sub><sup>(2)</sup>为偏置单元(bias unit)，默认值为1</li>
@@ -403,12 +403,48 @@
 <p>\end{split}<br>$$</p>
 <p>​    Θ<sup>(j)</sup> 也称为<strong>权重矩阵</strong></p>
 <ul>
-<li><p>图3表示的计算：<br>$$<br>\begin{split}<br>\alpha_1^{(2)}&amp;=g(\Theta_{10}^{(1)}x_0+\Theta_{11}^{(1)}x_1+\Theta_{12}^{(1)}x_2+\Theta_{13}^{(1)}x_3)\newline<br>\alpha_2^{(2)}&amp;=g(\Theta_{20}^{(1)}x_0+\Theta_{21}^{(1)}x_1+\Theta_{22}^{(1)}x_2+\Theta_{23}^{(1)}x_3)\newline<br>\alpha_3^{(2)}&amp;=g(\Theta_{30}^{(1)}x_0+\Theta_{31}^{(1)}x_1+\Theta_{32}^{(1)}x_2+\Theta_{33}^{(1)}x_3)\newline<br>h_\Theta(x)&amp;=\alpha_1^{(3)}=g(\Theta_{10}^{(2)}a_0^{(2)}+\Theta_{11}^{(1)}a_1^{(2)}+\Theta_{12}^{(1)}a_2^{(2)}+\Theta_{13}^{(1)}a_3^{(2)})\newline<br>\end{split}<br>$$</p>
-</li>
-<li><p>一般化：如果神经网络在 j 层有 s<sub>j</sub> 个单元，在 j+1 层有 s<sub>j+1</sub> 个单元，则 Θ<sup>(j)</sup> 的纬度是 s<sub>j+1</sub> x (s<sub>j</sub> + 1)<br>$$<br>\begin{split}<br>Generally:\ if\ network\ has\ s_j\ units\ in\ layer\ j,\ s_{j+1}\ units\ in\ layer\ j+1,\ then\ \Theta^{(j)}\ will\ be\ of\ dimension\ s_{j+1}\times(s_j+1)<br>\end{split}<br>$$</p>
-</li>
+<li>图3表示的计算：<br>$$<br>\begin{split}<br>\alpha_1^{(2)}&amp;=g(\Theta_{10}^{(1)}x_0+\Theta_{11}^{(1)}x_1+\Theta_{12}^{(1)}x_2+\Theta_{13}^{(1)}x_3)\newline<br>\alpha_2^{(2)}&amp;=g(\Theta_{20}^{(1)}x_0+\Theta_{21}^{(1)}x_1+\Theta_{22}^{(1)}x_2+\Theta_{23}^{(1)}x_3)\newline<br>\alpha_3^{(2)}&amp;=g(\Theta_{30}^{(1)}x_0+\Theta_{31}^{(1)}x_1+\Theta_{32}^{(1)}x_2+\Theta_{33}^{(1)}x_3)\newline<br>h_\Theta(x)&amp;=\alpha_1^{(3)}=g(\Theta_{10}^{(2)}a_0^{(2)}+\Theta_{11}^{(1)}a_1^{(2)}+\Theta_{12}^{(1)}a_2^{(2)}+\Theta_{13}^{(1)}a_3^{(2)})\newline<br>\end{split}<br>$$</li>
+<li>一般化：如果神经网络在 j 层有 s<sub>j</sub> 个单元，在 j+1 层有 s<sub>j+1</sub> 个单元，则 Θ<sup>(j)</sup> 的纬度是 s<sub>j+1</sub> x (s<sub>j</sub> + 1)<br>$$<br>\begin{split}<br>Generally:\ if\ network\ has\ s_j\ units\ in\ layer\ j,\ s_{j+1}\ units\ in\ layer\ j+1,\ then\ \Theta^{(j)}\ will\ be\ of\ dimension\ s_{j+1}\times(s_j+1)<br>\end{split}<br>$$</li>
 </ul>
 </li>
+<li><p>向量化神经网络：<br>$$<br>\begin{split}</p>
+<pre><code>&amp;\alpha^&#123;(2)&#125;=\begin&#123;bmatrix&#125;a_1^&#123;(2)&#125;\newline a_2^&#123;(2)&#125;\newline\vdots\newline a_n^&#123;(2)&#125;\end&#123;bmatrix&#125;\in R^n,\ 
+x=\begin&#123;bmatrix&#125;x_0\newline x_1\newline x_2\newline \vdots\newline x_n\end&#123;bmatrix&#125;\in R^&#123;n+1&#125;,\ 
+z^&#123;(2)&#125;=\begin&#123;bmatrix&#125;z_1^&#123;(2)&#125;\newline z_2^&#123;(2)&#125;\newline\vdots\newline z_n^&#123;(2)&#125;\end&#123;bmatrix&#125;\newline
+\newline
+&amp;a^&#123;(1)&#125;=x,\  z^&#123;(2)&#125;=\Theta^&#123;(1)&#125;a^&#123;(1)&#125;\newline
+&amp;a^&#123;(2)&#125;=g(z^&#123;(2)&#125;)\ (add\ a_0^&#123;(2)&#125;),\ z^&#123;(3)&#125;=\Theta^&#123;(2)&#125;a^&#123;(2)&#125;\newline
+&amp;...\newline
+&amp;a^&#123;(n-1)&#125;=g(z^&#123;(n-1)&#125;)\ (add\ a_0^&#123;(3)&#125;),\ z^&#123;(n)&#125;=\Theta^&#123;(n-1)&#125;a^&#123;(n-1)&#125;\newline
+&amp;a^&#123;(n)&#125;=h_\Theta(x)=g(z^&#123;(4)&#125;)
+</code></pre>
+<p>\end{split}<br>$$</p>
+</li>
+</ul>
+<h2 id="0913"><a href="#0913" class="headerlink" title="0913"></a>0913</h2><h3 id="多元分类器"><a href="#多元分类器" class="headerlink" title="多元分类器"></a>多元分类器</h3><ul>
+<li><p>本质：一对多思路的扩展</p>
+<p><img src="https://z3.ax1x.com/2021/09/13/4PzgRe.jpg" alt="4PzgRe.jpg"></p>
+<center>图4.多元神经网络分类器示意图</center></li>
+</ul>
+<h3 id="正向传播"><a href="#正向传播" class="headerlink" title="正向传播"></a>正向传播</h3><ul>
+<li>代价函数：<br>$$<br>\begin{split}<pre><code>J(\Theta)=&amp;-\frac&#123;1&#125;&#123;m&#125;[\sum_&#123;i=1&#125;^m\sum_&#123;k=1&#125;^Ky_k^&#123;(i)&#125;log(h_\Theta(x^&#123;(i)&#125;))_k+(1-y_k^&#123;(i)&#125;)log(1-h_\Theta(x^&#123;(i)&#125;))_k]\newline
+&amp;+\frac&#123;\lambda&#125;&#123;2m&#125;\sum_&#123;l=1&#125;^&#123;L-1&#125;\sum_&#123;i=1&#125;^&#123;s_l&#125;\sum_&#123;j=1&#125;^&#123;s_l+1&#125;(\Theta_&#123;ji&#125;^&#123;(l)&#125;)^2
+</code></pre>
+\end{split}<br>$$</li>
+</ul>
+<h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><ul>
+<li>算法：<br>$$<br>\begin{split}<pre><code>&amp;Training\ set\ \&#123;(x^&#123;(1)&#125;,y^&#123;(1)&#125;),...(x^&#123;(m)&#125;,y^&#123;(m)&#125;)\&#125;\newline
+&amp;Set\ \Delta_&#123;ij&#125;^&#123;(l)&#125;=0\ (for\ all\ l,i,j)\newline
+&amp;For\ i=1\ to\ m\newline
+&amp;\quad Set\ a^&#123;(1)&#125;=x^&#123;(i)&#125;\newline
+&amp;\quad Perform\ forward\ propagation\ to\ compute\ a^&#123;(l)&#125;\ for\ l=2,3,...,L\newline
+&amp;\quad Using\ y^&#123;(i)&#125;,\ compute\ \delta^&#123;(L)&#125;=a^&#123;(L)&#125;-y^&#123;(i)&#125;\newline
+&amp;\quad Compute\ \delta^&#123;(L-1)&#125;,\delta^&#123;(L-2)&#125;,...,\delta^&#123;(2)&#125;\newline
+&amp;\quad \Delta_&#123;ij&#125;^&#123;(l)&#125;:=\Delta_&#123;ij&#125;^&#123;(l)&#125;+a_j^&#123;(l)&#125;\delta_i^&#123;(l+1)&#125;\newline
+&amp;D_&#123;ij&#125;^&#123;(l)&#125;:=\frac&#123;1&#125;&#123;m&#125;\Delta_&#123;ij&#125;^&#123;(l)&#125;+\lambda\Theta_&#123;ij&#125;^&#123;(l)&#125;\ if\ j\neq0\newline
+&amp;D_&#123;ij&#125;^&#123;(l)&#125;:=\frac&#123;1&#125;&#123;m&#125;\Delta_&#123;ij&#125;^&#123;(l)&#125;\ if\ j=0
+</code></pre>
+\end{split}<br>$$</li>
 </ul>
 
         </div>
