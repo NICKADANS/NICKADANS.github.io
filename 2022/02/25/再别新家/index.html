@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="NickAdans">
+
+
+
+
+
+<title>再别新家 | Nick&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">NICKADANS</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">NICKADANS</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">再别新家</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">NickAdans</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">二月 25, 2022&nbsp;&nbsp;0:54:55</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="再别新家"><a href="#再别新家" class="headerlink" title="再别新家"></a>再别新家</h2><p>​        做完核酸，我赶到新家取寄放在那的衣服，它们将被妈妈打包好，放到我的行李箱。</p>
+<p>​        这里很新，环境雅致，但我们平常不住这里。妈妈和爸爸说，这儿是留给我和我未来的妻子的。</p>
+<p>​        把衣服收拾好后，我在沙发上呆坐了五分钟，我想起夏天的时候，自己总把窗户开着，躺在这儿睡觉，风穿过身子，梦也变得香甜……</p>
+<p>​        年前，爸爸在朋友的厂里找了份兼职，晚上下班回来，站着随便吃了两口饭，就得往那跑。奶奶不断地念叨着自己的眼睛疼，但区里修路缺环卫工的时候，她仍然为了多赚一点辛苦钱，午饭都顾不得吃，把盛满的碗放在一旁，挤着时间开海蛎，一到点就换上工装急着去返工。在这样的情况下，妈妈肩负起了家里大大小小的活，从清洗、饮食再到祭祀，只要上完班回到家，她就得面对家里大大小小的事务。</p>
+<p>​        暑假回到家，我就拥有了这样一份“惊喜”，妈妈说是她和爸爸一起偷偷决定的，等我知道时，木已成舟。</p>
+<p>​        尽管，我并不想要这样的惊喜，对我来说有着更为沉重的感情在里头。在得知这一切之前，我有自己想做的事情，不可避免地会花一些钱，可不至于这么多。</p>
+<p>​        爸爸妈妈夏天的时候常常拉着奶奶来这里，让她晚上睡得清爽些，不至于像老家这么燥闷。奶奶老问我，会不会感觉咱们的新房子有点儿小呀？</p>
+<p>​        我喜欢这儿的环境，布局和设计，上一个住在这里的人为我们铺垫好了一切。我从爸妈口中得知，这里一直只有屋主在读初中的女儿一个人，周六日从学校回来住，一年下来也基本没待过多少天。</p>
+<p>​        但当我向奶奶表示自己已经十分满足的时候，她又很开心地笑着说，傻孩子，其实别人家的房子可都很大呢，你都不懂。</p>
+<p>​        夏天妈妈买了几个漂亮的玻璃花瓶，说要在新家的餐桌上插上花，就像电视里看到的那样。冬天我看到其中一个花瓶在老家的神桌上，问起插花的事情，她摇摇头说现在花太贵啦，那儿(新家)也不常去，便放一个在这里，平时插着也好看。</p>
+<p>​        正月初二的时候，我和亲戚们来这里泡茶，但忘了关自动烧水的按钮，直到晚上在亲戚那边休息的时候才想起来。那晚爸爸连忙叫邻居帮忙进屋关掉，此刻，我也向开水壶一瞥。</p>
+<p>​        可是，我得走了，离开这里，回到老家，到北京去。</p>
+<p>​        站起来后，我靠在窗前，凝望着屋外的远景。平凡尘世里，这样鸿毛般的一瞬，或许从此便不会再记起，但它顷刻间压倒了我，让我感觉透不过气。在门窗合闭的屋子里，下午的明亮光线通过厚厚的透明玻璃，掠下一道斜长的灰色阴影。在复杂的情愫下，我在脑海里闪过无数生活的重复，几百年的岁月沉重地压在我的肩头。</p>
+<p>​        我把门迅速地合上，急于重返最熟悉的世界里，我享受着生活的重复，但我却难以接受重复而有尽头。</p>
+<p>​        </p>
+<p>​        </p>
+<p>​        </p>
+<p>​        </p>
+<p>​        </p>
+<p>​        </p>
+<p>​        </p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>NickAdans</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://nickadans.com/2022/02/25/%E5%86%8D%E5%88%AB%E6%96%B0%E5%AE%B6/">https://nickadans.com/2022/02/25/%E5%86%8D%E5%88%AB%E6%96%B0%E5%AE%B6/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E6%84%9F%E6%83%85/"># 感情</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/08/08/%E5%86%99%E5%9C%A8%E4%BA%8C%E5%8D%81%E4%B8%89%E5%B2%81%E5%88%9D/">写在二十三岁初</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© NickAdans | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
